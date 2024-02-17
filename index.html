@@ -9,22 +9,29 @@
   <script src="https://cdn.tailwindcss.com"></script>
   
 </head>
-<body class="max-w-screen-xl mx-auto my-10">
-  <header>
+<body>
+  <header class="max-w-screen-xl mx-auto my-10">
     <!-- nav section -->
     <nav class="flex justify-between items-center">
       <div>
         <h1 class="title text-3xl font-bold">P-Ticket</h1>
       </div>
-      
       <div>
-        <button class="btn bg-green-100 text-green-500">Bus<span><img src="images/bus-icon.png" alt=""></span></button>
+        <ul class="hidden md:flex justify-between gap-8">
+          <li>Home</li>
+          <li>About</li>
+          <li>Destination</li>
+          <li>Search</li>
+        </ul>
+      </div>
+      <div>
+        <button class="btn bg-green-100 text-green-500 border-2 border-green-500">Bus<span><img src="images/bus-icon.png" alt=""></span></button>
       </div>
     </nav>
     <!-- banner section -->
     <section class="banner-section my-10">
-      <div class="hero max-w-screen-xl md:p-12 "
-        style="background-image: url(images/banner.png); border-radius: 8px;;">
+      <div class="hero max-w-screen-xl md:p-12 relative "
+        style="background-image: url(images/banner.png); border-radius: 8px;">
         
         <div class="hero-content text-center text-neutral-content">
           <div class="max-w-xl">
@@ -36,37 +43,152 @@
           </div>
         </div>
       </div>
+      <!-- card section -->
+      <div class="flex flex-col md:flex-row justify-center items-center md:justify-around relative md:bottom-10">
+        <!-- card 1 -->
+        <div class="flex gap-2 p-6 border-b-2 border-green-500 rounded-lg bg-white">
+          <div>
+            <img src="images/people.png" alt="">
+          </div>
+          <div>
+            <h1 class="text-3xl font-bold">500K+</h1>
+            <h3>Registered users</h3>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="flex gap-2 p-6 border-b-2 border-green-500 rounded-lg bg-white">
+          <div>
+            <img src="images/ticket-cupon.png" alt="">
+          </div>
+          <div>
+            <h1 class="text-3xl font-bold">17 Lacks</h1>
+            <h3>Tickets sold</h3>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="flex gap-2 p-6 border-b-2 border-green-500 rounded-lg bg-white">
+          <div>
+            <img src="images/stoppage.png" alt="">
+          </div>
+          <div>
+            <h1 class="text-3xl font-bold">80K+</h1>
+            <h3>Rental partners</h3>
+          </div>
+        </div>
+        
+      </div>
     </section>
     <!-- offer section -->
     <section class="offer-section">
-      <h1 class="offer-title">Best offers for you</h1>
-      <div class="flex items-center justify-center bg-yellow-400">
-        <div >
-          <h1>15% OFF</h1>
-          <p>on your next purchase</p>
-          <p>use by January 2024</p>
+      <h1 class="offer-title text-3xl font-bold mb-4 flex items-center justify-center">Best offers for you</h1>
+      <div class="md:flex gap-8">
+        <!-- new coupon card -->
+        <div class="flex flex-1 rounded-xl items-center justify-center bg-yellow-400 my-4 md:my-0">
+          <div class="md:flex flex-col align-middle md:pr-16 ">
+            <h1 class="text-xl md:text-4xl font-extrabold">15% OFF</h1>
+            <p class="font-bold">on your next purchase</p>
+            <p>use by January 2024</p>
+          </div>
+          <img src="images/cupon-devider.png" alt="">
+          <div>
+            <h1 class="md:text-4xl font-extrabold">NEW15</h1>
+            <h3 class="font-bold">Coupon Code</h3>
+          </div>
         </div>
-        <img src="images/info-devider.png" alt="">
-        <div>
-          <h1>NEW15</h1>
-          <h3>Coupon Code</h3>
+        <!-- couple coupon card -->
+        <div class="flex flex-1 rounded-xl items-center justify-center bg-pink-300">
+          <div class="md:flex flex-col align-middle md:pr-16 ">
+            <h1 class="text-xl md:text-4xl font-extrabold">20% OFF</h1>
+            <p class="font-bold">on your next purchase</p>
+            <p>use by January 2024</p>
+          </div>
+          <img src="images/cupon-devider.png" alt="">
+          <div>
+            <h1 class=" md:text-4xl font-extrabold">Couple20</h1>
+            <h3 class="font-bold">Coupon Code</h3>
+          </div>
         </div>
       </div>
-      <div class="flex items-center justify-center bg-yellow-400">
-        <div>
-          <h1>15% OFF</h1>
-          <p>on your next purchase</p>
-          <p>use by January 2024</p>
-        </div>
-        <img src="images/info-devider.png" alt="">
-        <div>
-          <h1>NEW15</h1>
-          <h3>Coupon Code</h3>
-        </div>
+      <!-- more offer button -->
+      <div class="flex justify-center items-center mt-8">
+        <button class="btn bg-white border-2 border-green-500">See All Offers</button>
       </div>
     </section>
   </header>
-  <main></main>
+  <main class="booking-section my-24 bg-gray-300 rounded-xl p">
+    <!-- ticket booking section -->
+    <section class="max-w-screen-xl mx-auto mt-10">
+      <!-- booking intro section -->
+      <div class="flex flex-col gap-4 justify-center items-center p-8 mb-8">
+        <h1 class="text-3xl font-bold">P.H Paribahan</h1>
+        <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a
+        streamlined .</p>
+      </div>
+      <!-- bus info -->
+      <div class="bg-white rounded-2xl">
+        <div class="md:flex ">
+          <div class="flex-1">
+            <div class="flex justify-between p-8">
+              <div>
+                <div class="md:flex gap-4">
+                  <div>
+                    <img src="images/bus-logo.png" alt="">
+                  </div>
+                  <div>
+                    <h1 class="text-xl md:text-3xl font-bold">Greenline Paribahan</h1>
+                    <h3 class=" md:text-xl">Coach-009-WEB ! AC_Business</h3>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex gap-4 bg-green-200 p-4 rounded-xl">
+                  <img src="images/seat-green.png" alt="">
+                  <h1 class="text-xl text-green-600"><span>40</span> seats left</h1>
+                </div>
+              </div>
+            </div>
+            <!-- route info -->
+            <div class="p-8">
+              <div class="flex flex-col gap-10  bg-gray-300 p-8 rounded-lg">
+                <div class="flex justify-between border-b-4 border-dotted ">
+                  <h2>Route</h2>
+                  <h1 class="text-xl font-bold">Dhaka - Sylhet</h1>
+                </div>
+                <div class="flex justify-between border-b-4 border-dotted">
+                  <h2>Departure Time</h2>
+                  <h1 class="text-xl font-bold">9:00 PM</h1>
+                </div>
+                <div class="flex justify-around">
+                  <div class="p-4 bg-gray-400 rounded-lg">
+                    <h1>Boarding Point - Laxmipur</h1>
+                  </div>
+                  <div class="p-4 bg-gray-400 rounded-lg">
+                    <h1>Dropping Point - Bogura</h1>
+                  </div>
+                  <div class="p-4 bg-gray-400 rounded-lg">
+                    <h1>Est. Time - 11 Hour</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="hidden md:block" src="images/info-devider.png" alt="">
+          </div>
+          <div class="flex flex-col md:gap-4 items-center justify-center p-8">
+            <img src="images/fare.png" alt="">
+            <h1 class="md:text-3xl font-bold">500 Taka</h1>
+            <h3 class="md:text-xl">per seat</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- bus seat section -->
+      <div class="bus-seat">
+        
+      </div>
+    </section>
+  </main>
   <footer></footer>
 
   <script src="js/ticket.js"></script>
