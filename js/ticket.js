@@ -1,4 +1,4 @@
-function changeSeatBgColor(elementId) {
+function bookingDynamic(elementId) {
   // change bg
   const element = document.getElementById(elementId);
   const elementBg = element.classList.add('bg-green-500');
@@ -72,6 +72,9 @@ function applyCoupon() {
     couponContainer.classList.add('hidden');
   }
 }
+
+
+
 
 
 
