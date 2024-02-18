@@ -15,6 +15,11 @@ function bookingDynamic(elementId) {
   const updatedSeatNumber = selectedSeatNumber + 1;
   selectedSeat.innerText = updatedSeatNumber;
 
+  console.log(updatedSeatNumber);
+  if (updatedSeatNumber > 4) {
+    element.removeAttribute('onclick')
+  }
+
 
   // ticket info
   const ticketInfoContainer = document.getElementById('ticket-info-container');
