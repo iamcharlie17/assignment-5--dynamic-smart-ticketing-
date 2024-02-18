@@ -235,7 +235,7 @@
             <img src="images/info-devider.png" alt="">
           </div>
           <!-- fare calculate section -->
-          <div class="fare-calc bg-gray-300 p-8 rounded-xl">
+          <div class="fare-calc bg-gray-300 p-8 rounded-xl w-96">
             <h1 class="text-3xl font-bold mb-8">Select your seat</h1>
             <!-- seat count section -->
             <div class="seat-count space-y-10">
@@ -257,7 +257,7 @@
               <div id="coupon-container" class="coupon-input">
                 <label class="input input-bordered flex items-center gap-2">
                   <input id="coupon" type="text" class="grow" placeholder="Have any coupon?" />
-                  <button id="apply" class="btn bg-green-500 px-8 text-xl text-white">Apply</button>
+                  <button onclick="applyCoupon()" id="apply" class="btn bg-green-500 px-8 text-xl text-white">Apply</button>
                 </label>
               </div>
               <!-- grand total -->
@@ -293,6 +293,14 @@
       </div>
     </div>
   </dialog>
+  <!-- alert when crossed the maximum ticket selection -->
+  <div id="alert" role="alert" class="alert alert-error hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span>You selected maximum 4 tickets</span>
+  </div>
   <footer></footer>
 
   <script src="js/ticket.js"></script>

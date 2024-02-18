@@ -15,12 +15,7 @@ function changeSeatBgColor(elementId) {
   const updatedSeatNumber = selectedSeatNumber + 1;
   selectedSeat.innerText = updatedSeatNumber;
 
-  // total price
-  const totalPriceElement = document.getElementById('total-price');
-  const totalPrice = parseInt(totalPriceElement.innerText);
-  const totalFinalPrice = totalPrice + 550;
-  totalPriceElement.innerText = totalFinalPrice;
-  
+
   // ticket info
   const ticketInfoContainer = document.getElementById('ticket-info-container');
 
@@ -41,11 +36,48 @@ function changeSeatBgColor(elementId) {
 
   ticketInfoContainer.appendChild(div);
 
+  // total price
+  const totalPriceElement = document.getElementById('total-price');
+  const totalPrice = parseInt(totalPriceElement.innerText);
+  const totalFinalPrice = totalPrice + 550;
+  totalPriceElement.innerText = totalFinalPrice;
+
+  
+  // grand total price
   const grandTotalContainer = document.getElementById('grand-total-price');
   grandTotalContainer.innerText = totalFinalPrice;
-
-
+  
 }
+
+function applyCoupon() {
+  // apply coupon
+  const couponContainer = document.getElementById('coupon');
+  const couponText = couponContainer.value;
+  if (couponText === 'Couple 20') {
+    const grandTotalContainer = document.getElementById('grand-total-price');
+    const discount = parseInt(grandTotalContainer.innerText) * .20;
+    const discountedPrice = parseInt(grandTotalContainer.innerText) - discount;
+    grandTotalContainer.innerText = discountedPrice;
+
+    const couponContainer = document.getElementById('coupon-container');
+    couponContainer.classList.add('hidden');
+  }
+  if (couponText === 'NEW15') {
+    const grandTotalContainer = document.getElementById('grand-total-price');
+    const discount = parseInt(grandTotalContainer.innerText) * .15;
+    const discountedPrice = parseInt(grandTotalContainer.innerText) - discount;
+    grandTotalContainer.innerText = discountedPrice;
+
+    const couponContainer = document.getElementById('coupon-container');
+    couponContainer.classList.add('hidden');
+  }
+}
+
+
+
+
+
+
 
 
 
