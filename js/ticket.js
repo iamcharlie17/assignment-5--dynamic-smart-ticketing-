@@ -3,6 +3,9 @@ function bookingDynamic(elementId) {
   const element = document.getElementById(elementId);
   const elementBg = element.classList.add('bg-green-500');
 
+  // remove event listener
+  
+
   // remaining seat
   const remainingSeat = document.getElementById('remaining-seat');
   const remainingSeatNo = parseInt(remainingSeat.innerText);
