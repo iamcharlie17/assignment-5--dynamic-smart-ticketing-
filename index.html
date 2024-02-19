@@ -25,7 +25,7 @@
         </ul>
       </div>
       <div>
-        <button class="btn bg-green-100 text-green-500 border-2 border-green-500">Bus<span><img src="images/bus-icon.png" alt=""></span></button>
+        <button onclick="location.href='#booking-section'" class="btn bg-green-100 text-green-500 border-2 border-green-500">Bus<span><img src="images/bus-icon.png" alt=""></span></button>
       </div>
     </nav>
     <!-- banner section -->
@@ -124,6 +124,7 @@
         <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a
         streamlined .</p>
       </div>
+      
       <!-- bus info -->
       <div class="bg-white rounded-2xl">
         <div class="md:flex ">
@@ -255,9 +256,9 @@
               </div>
               <!-- input coupon -->
               <div id="coupon-container" class="coupon-input">
-                <label class="input input-bordered flex items-center gap-2">
-                  <input id="coupon" type="text" class="grow" placeholder="Have any coupon?" />
-                  <button onclick="applyCoupon()" id="apply" class="btn bg-green-500 px-8 text-xl text-white">Apply</button>
+                <label class="input  flex items-center gap-2">
+                  <input id="coupon" type="text" class="" placeholder="Have any coupon?" />
+                  <button onclick="applyCoupon()" id="apply" class="btn bg-green-500 px-8 text-xl text-white border-none" disabled>Apply</button>
                 </label>
               </div>
               <!-- grand total -->
@@ -267,7 +268,7 @@
               </div>
               <!-- next button -->
               <div class="next-btn">
-                <button class="btn  bg-green-500 w-full text-xl text-white" onclick="my_modal_1.showModal()">Next</button>
+                <button id="next" class="btn border-none bg-green-500 w-full text-xl text-white" onclick="my_modal_1.showModal()" disabled>Next</button>
               </div>
             </div>
           </div>
@@ -294,13 +295,15 @@
     </div>
   </dialog>
   <!-- alert when crossed the maximum ticket selection -->
-  <div id="alert" role="alert" class="alert alert-error hidden" >
-    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-    <span>You selected maximum 4 tickets</span>
-  </div>
+  
+<div id="alert" role="alert" class="alert alert-error hidden">
+  <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+  <span>You can select maximum 4 tickets</span>
+</div>
+  
   <footer></footer>
 
   <script src="js/ticket.js"></script>

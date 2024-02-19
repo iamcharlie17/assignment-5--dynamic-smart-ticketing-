@@ -15,10 +15,7 @@ function bookingDynamic(elementId) {
   const updatedSeatNumber = selectedSeatNumber + 1;
   selectedSeat.innerText = updatedSeatNumber;
 
-  console.log(updatedSeatNumber);
-  if (updatedSeatNumber > 4) {
-    element.removeAttribute('onclick')
-  }
+  
 
 
   // ticket info
@@ -51,14 +48,42 @@ function bookingDynamic(elementId) {
   // grand total price
   const grandTotalContainer = document.getElementById('grand-total-price');
   grandTotalContainer.innerText = totalFinalPrice;
+
+  // max selection
+  
+  if (updatedSeatNumber > 0) {
+    document.getElementById('next').removeAttribute('disabled');
+  }
+  if (updatedSeatNumber >= 4) {
+    document.getElementById('apply').removeAttribute('disabled');
+  }
+  if (updatedSeatNumber >= 5) {
+    alert('You selected maximum tickets');
+    const elementBg = element.classList.remove('bg-green-500');
+    document.getElementById('ticket-info-container').lastChild.classList.add('hidden')
+    const totalFinalPrice = totalPrice + 0;
+    totalPriceElement.innerText = totalFinalPrice;
+
+    const updatedSeatNumber = selectedSeatNumber + 0;
+    selectedSeat.innerText = updatedSeatNumber;
+
+    const newRemainingSeat = remainingSeatNo - 0;
+    remainingSeat.innerText = newRemainingSeat;
+
+    const grandTotalContainer = document.getElementById('grand-total-price');
+    grandTotalContainer.innerText = totalPriceElement.innerText;
+  }
   
 }
 
 function applyCoupon() {
   // apply coupon
+  
+
   const couponContainer = document.getElementById('coupon');
   const couponText = couponContainer.value;
   if (couponText === 'Couple 20') {
+
     const grandTotalContainer = document.getElementById('grand-total-price');
     const discount = parseInt(grandTotalContainer.innerText) * .20;
     const discountedPrice = parseInt(grandTotalContainer.innerText) - discount;
@@ -77,6 +102,8 @@ function applyCoupon() {
     couponContainer.classList.add('hidden');
   }
 }
+
+
 
 
 
